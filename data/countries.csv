@@ -1,0 +1,201 @@
+ccode,Country,Countryname
+2,USA,United States of America
+20,CAN,Canada
+31,BHS,Bahamas
+40,CUB,Cuba
+41,HTI,Haiti
+42,DOM,Dominican Republic
+51,JAM,Jamaica
+52,TTO,Trinidad and Tobago
+53,BRB,Barbados
+54,DMA,Dominica
+55,GRD,Grenada
+56,LCA,Saint Lucia
+57,VCT,Saint Vincent and the Grenadines
+58,ATG,Antigua and Barbuda
+60,KNA,Saint Kitts and Nevis
+70,MEX,Mexico
+80,BLZ,Belize
+90,GTM,Guatemala
+91,HND,Honduras
+92,SLV,El Salvador
+93,NIC,Nicaragua
+94,CRI,Costa Rica
+95,PAN,Panama
+100,COL,Colombia
+101,VEN,"Venezuela, Bolivarian Republic of"
+110,GUY,Guyana
+115,SUR,Suriname
+130,ECU,Ecuador
+135,PER,Peru
+140,BRA,Brazil
+145,BOL,Bolivia (Plurinational State of)
+150,PRY,Paraguay
+155,CHL,Chile
+160,ARG,Argentina
+165,URY,Uruguay
+200,GBR,United Kingdom of Great Britain and Northern Ireland
+205,IRL,Ireland
+210,NLD,Netherlands
+211,BEL,Belgium
+212,LUX,Luxembourg
+220,FRA,France
+221,MCO,Monaco
+223,LIE,Liechtenstein
+225,CHE,Switzerland
+230,ESP,Spain
+232,AND,Andorra
+235,PRT,Portugal
+260,GFR,German Federal Republic
+265,DDR,German Democratic Republic
+290,POL,Poland
+305,AUT,Austria
+310,HUN,Hungary
+315,CSK,Czechoslovakia
+316,CZE,Czech Republic
+317,SVK,Slovakia
+325,ITA,Italy
+331,SMR,San Marino
+338,MLT,Malta
+339,ALB,Albania
+343,MKD,The former Yugoslav Republic of Macedonia
+344,HRV,Croatia
+345,SRB,Serbia
+346,BIH,Bosnia and Herzegovina
+349,SVN,Slovenia
+350,GRC,Greece
+352,CYP,Cyprus
+355,BGR,Bulgaria
+359,MDA,Republic of Moldova
+360,ROU,Romania
+365,RUS,Russian Federation
+366,EST,Estonia
+367,LVA,Latvia
+368,LTU,Lithuania
+369,UKR,Ukraine
+370,BLR,Belarus
+371,ARM,Armenia
+372,GEO,Georgia
+373,AZE,Azerbaijan
+375,FIN,Finland
+380,SWE,Sweden
+385,NOR,Norway
+390,DNK,Denmark
+395,ISL,Iceland
+402,CPV,Cabo Verde
+403,STP,Sao Tome and Principe
+404,GNB,Guinea Bissau
+411,GNQ,Equatorial Guinea
+420,GMB,Gambia (Islamic Republic of the)
+432,MLI,Mali
+433,SEN,Senegal
+434,BEN,Benin
+435,MRT,Mauritania
+436,NER,Niger
+437,CIV,Côte D'Ivoire
+438,GIN,Guinea
+439,BFA,Burkina Faso
+450,LBR,Liberia
+451,SLE,Sierra Leone
+452,GHA,Ghana
+461,TGO,Togo
+471,CMR,Cameroon
+475,NGA,Nigeria
+481,GAB,Gabon
+482,CAF,Central African Republic
+483,TCD,Chad
+484,COG,Congo
+490,COD,Democratic Republic of the Congo
+500,UGA,Uganda
+501,KEN,Kenya
+510,TZA,United Republic of Tanzania
+511,EAZ,Zanzibar
+516,BDI,Burundi
+517,RWA,Rwanda
+520,SOM,Somalia
+522,DJI,Djibouti
+530,ETH,Ethiopia
+531,ERI,Eritrea
+540,AGO,Angola
+541,MOZ,Mozambique
+551,ZMB,Zambia
+552,ZWE,Zimbabwe
+553,MWI,Malawi
+560,ZAF,South Africa
+565,NAM,Namibia
+570,LSO,Lesotho
+571,BWA,Botswana
+572,SWZ,Swaziland
+580,MDG,Madagascar
+581,COM,Comoros
+590,MUS,Mauritius
+591,SYC,Seychelles
+600,MAR,Morocco
+615,DZA,Algeria
+616,TUN,Tunisia
+620,LBY,Libya
+625,SDN,Sudan
+626,SSD,South Sudan
+630,IRN,Iran (Islamic Republic of)
+640,TUR,Turkey
+645,IRQ,Iraq
+651,EGY,Egypt
+652,SYR,Syrian Arab Republic
+660,LBN,Lebanon
+663,JOR,Jordan
+666,ISR,Israel
+670,SAU,Saudi Arabia
+678,YAR,Yemen Arab Republic
+680,YAR,Yemen People's Republic
+690,KWT,Kuwait
+692,BHR,Bahrain
+694,QAT,Qatar
+696,ARE,United Arab Emirates
+698,OMN,Oman
+700,AFG,Afghanistan
+701,TKM,Turkmenistan
+702,TJK,Tajikistan
+703,KGZ,Kyrgyzstan
+704,UZB,Uzbekistan
+705,KAZ,Kazakhstan
+710,CHN,China
+712,MNG,Mongolia
+713,TWN,"Taiwan, Province of China"
+731,PRK,Democratic People's Republic of Korea
+732,KOR,Republic of Korea
+740,JPN,Japan
+750,IND,India
+760,BTN,Bhutan
+770,PAK,Pakistan
+771,BGD,Bangladesh
+775,MMR,Myanmar
+780,LKA,Sri Lanka
+781,MDV,Maldives
+790,NPL,Nepal
+800,THA,Thailand
+811,KHM,Cambodia
+812,LAO,Lao People's Democratic Republic
+816,VNM,Viet Nam
+820,MYS,Malaysia
+830,SGP,Singapore
+835,BRN,Brunei Darussalam
+840,PHL,Philippines
+850,IDN,Indonesia
+860,TLS,Timor-Leste
+900,AUS,Australia
+910,PNG,Papua New Guinea
+920,NZL,New Zealand
+935,VUT,Vanuatu
+940,SLB,Solomon Islands
+946,KIR,Kiribati
+947,TUV,Tuvalu
+950,FJI,Fiji
+955,TON,Tonga
+970,NRU,Nauru
+983,MHL,Marshall Islands
+986,PLW,Palau
+987,FSM,Micronesia (Federated States of)
+990,WSM,Samoa
+255,DEU,Germany
+679,YEM,Yemen
+341,MNE,Montenegro

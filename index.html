@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>United Nations General Assembly Voting, 1946-2019</title>
+
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/2.1.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/dc@4/dist/style/dc.css"
+    />
+
+    <style>
+      .container {
+        width: 943px;
+      }
+      div.dc-chart {
+        float: left;
+      }
+      .country > path:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      .dc-cbox-group {
+        list-style-type: none;
+        margin-left: 0;
+      }
+      .dc-cbox-group label {
+        display: inline-block;
+      }
+      .dc-cbox-group input[type="checkbox"],
+      .dc-cbox-group input[type="radio"] {
+        margin: 0 5px 5px 5px;
+      }
+      #yearly-volume-chart g.y {
+        display: none;
+      }
+      .dc-chart .selected path {
+        fill: gold;
+        stroke: gold;
+        stroke-width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" style="margin-left: 9px;">
+        <h4>United Nations General Assembly Voting, 1946-2019</h4>
+      </div>
+
+      <div class="row" style="margin: 0;">
+        <div id="map-chart" style="position: relative;">
+          <strong style="margin-left: 9px;">Select a country</strong
+          ><span id="country-info"></span>
+          <p class="muted" style="margin-left: 9px;">
+            <small
+              >Voting similarity index between ccode1 and ccode2 in a given
+              session – computed using 3 category vote data (1 = “yes” or
+              approval for an issue; 2 = abstain, 3 = “no” or disapproval for an
+              issue.) - Abstention is counted as half-disagreement with a yes or
+              no vote</small
+            >
+          </p>
+          <a
+            class="reset"
+            href="javascript:mapChart.filterAll();dc.redrawAll();"
+            style="display: none;"
+            >reset</a
+          >
+          <span class="reset" style="display: none;">
+            | Current filter: <span class="filter"></span
+          ></span>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span4">
+          <div id="issue-chart" style="width: 100%; position: relative;">
+            <strong style="margin-left: 9px;">Filter by issue</strong>
+            <a
+              class="reset"
+              href="javascript:issueChart.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <p class="muted" style="margin-left: 9px;">
+              <small
+                >These are based on searches in descriptions. They have been
+                subjected to a rudimentary visual check but they may not be 100%
+                accurate</small
+              >
+            </p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="span4">
+          <div
+            id="top-countries-chart"
+            style="width: 100%; position: relative;"
+          >
+            <strong>Countries with highest voting similarity</strong>
+            <a
+              class="reset"
+              href="javascript:topCountriesChart.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="span4">
+          <div
+            id="bottom-countries-chart"
+            style="width: 100%; position: relative;"
+          >
+            <strong>Countries with lowest voting similarity</strong>
+            <a
+              class="reset"
+              href="javascript:bottomCountriesChart.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <div id="yearly-vote-chart" style="width: 100%; position: relative;">
+            <strong style="margin-left: 9px;"
+              >Yearly voting records towards majority</strong
+            >
+            <span class="reset" style="display: none;"
+              >range: <span class="filter"></span
+            ></span>
+            <a
+              class="reset"
+              href="javascript:voteChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <div
+            id="yearly-volume-chart"
+            style="width: 100%; position: relative;"
+          ></div>
+          <p class="muted pull-right" style="margin-right: 15px;">
+            select a time range to zoom in
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span2">
+          <div
+            id="majority-chart"
+            style="margin-left: 9px; position: relative;"
+          >
+            <strong>Position towards majority</strong>
+            <a
+              class="reset"
+              href="javascript:majorityChart.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="span2">
+          <div id="amend-box" style="position: relative;">
+            <strong>Amendment</strong>
+            <p class="muted">
+              <small>
+                Whether the vote was on an amendment
+              </small>
+            </p>
+            <a
+              class="reset"
+              href="javascript:amendBox.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="span2">
+          <div id="para-box" style="position: relative;">
+            <strong>Paragraph</strong>
+            <p class="muted">
+              <small>
+                Whether the vote was on a paragraph rather than an entire
+                resolution
+              </small>
+            </p>
+            <a
+              class="reset"
+              href="javascript:paraBox.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="span2">
+          <div id="important-box" style="position: relative;">
+            <strong>Important vote</strong>
+            <p class="muted">
+              <small>
+                Vote identified as important by U.S. State Department report
+                Voting Practices in the United Nations. NOTE: not available for
+                all years!!!!!
+              </small>
+            </p>
+            <a
+              class="reset"
+              href="javascript:importantBox.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="span4">
+          <div id="fluctuation-chart" style="position: relative;">
+            <strong>Agreement among voters</strong>
+            <span class="reset" style="display: none;"
+              >range: <span class="filter"></span
+            ></span>
+            <a
+              class="reset"
+              href="javascript:fluctuationChart.filterAll();dc.redrawAll();"
+              style="display: none;"
+              >reset</a
+            >
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="row" style="margin: 0;">
+        <div>
+          <div>
+            <div class="dc-data-count" style="margin-left: 9px;">
+              <span class="filter-count"></span> selected out of
+              <span class="total-count"></span> records |
+              <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+            </div>
+          </div>
+          <table class="table table-hover dc-data-table"></table>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+
+      <a href="https://github.com/un-project/un-votes"
+        ><img
+          style="position: absolute; top: 0; right: 0; border: 0;"
+          src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+          alt="Fork me on GitHub"
+      /></a>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.5.2/crossfilter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/dc@4/dist/dc.js"
+    ></script>
+    <script type="text/javascript" src="votes.js"></script>
+  </body>
+</html>
