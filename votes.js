@@ -14,6 +14,49 @@ const resTable = new dc.DataTable(".dc-data-table");
 const importantBox = new dc.CboxMenu("#important-box");
 const amendBox = new dc.CboxMenu("#amend-box");
 const paraBox = new dc.CboxMenu("#para-box");
+const opts = {
+  lines: 9,
+  length: 9,
+  width: 5,
+  radius: 14,
+  color: "#EE3124",
+  speed: 1.9,
+  trail: 40,
+  className: "spinner",
+};
+const mapChartSpinner = new Spinner(opts).spin(
+  document.getElementById("map-chart")
+);
+const majorityChartSpinner = new Spinner(opts).spin(
+  document.getElementById("majority-chart")
+);
+const fluctuationChartSpinner = new Spinner(opts).spin(
+  document.getElementById("fluctuation-chart")
+);
+const topCountriesChartSpinner = new Spinner(opts).spin(
+  document.getElementById("top-countries-chart")
+);
+const bottomCountriesChartSpinner = new Spinner(opts).spin(
+  document.getElementById("bottom-countries-chart")
+);
+const issueChartSpinner = new Spinner(opts).spin(
+  document.getElementById("issue-chart")
+);
+const voteChartSpinner = new Spinner(opts).spin(
+  document.getElementById("yearly-vote-chart")
+);
+const volumeChartSpinner = new Spinner(opts).spin(
+  document.getElementById("yearly-volume-chart")
+);
+const importantBoxSpinner = new Spinner(opts).spin(
+  document.getElementById("important-box")
+);
+const amendBoxSpinner = new Spinner(opts).spin(
+  document.getElementById("amend-box")
+);
+const paraBoxSpinner = new Spinner(opts).spin(
+  document.getElementById("para-box")
+);
 const defaultCountry = "FRA";
 
 d3.csv("data/countries.csv").then((countries) => {
@@ -53,49 +96,23 @@ d3.csv("data/countries.csv").then((countries) => {
       const currentCcode = countryToCcode[country];
       const otherCcodes = ccodes.filter((i) => i !== currentCcode);
 
-      const opts = {
-        lines: 9,
-        length: 9,
-        width: 5,
-        radius: 14,
-        color: "#EE3124",
-        speed: 1.9,
-        trail: 40,
-        className: "spinner",
-      };
-      const mapChartSpinner = new Spinner(opts).spin(
-        document.getElementById("map-chart")
-      );
-      const majorityChartSpinner = new Spinner(opts).spin(
-        document.getElementById("majority-chart")
-      );
-      const fluctuationChartSpinner = new Spinner(opts).spin(
+      mapChartSpinner.spin(document.getElementById("map-chart"));
+      majorityChartSpinner.spin(document.getElementById("majority-chart"));
+      fluctuationChartSpinner.spin(
         document.getElementById("fluctuation-chart")
       );
-      const topCountriesChartSpinner = new Spinner(opts).spin(
+      topCountriesChartSpinner.spin(
         document.getElementById("top-countries-chart")
       );
-      const bottomCountriesChartSpinner = new Spinner(opts).spin(
+      bottomCountriesChartSpinner.spin(
         document.getElementById("bottom-countries-chart")
       );
-      const issueChartSpinner = new Spinner(opts).spin(
-        document.getElementById("issue-chart")
-      );
-      const voteChartSpinner = new Spinner(opts).spin(
-        document.getElementById("yearly-vote-chart")
-      );
-      const volumeChartSpinner = new Spinner(opts).spin(
-        document.getElementById("yearly-volume-chart")
-      );
-      const importantBoxSpinner = new Spinner(opts).spin(
-        document.getElementById("important-box")
-      );
-      const amendBoxSpinner = new Spinner(opts).spin(
-        document.getElementById("amend-box")
-      );
-      const paraBoxSpinner = new Spinner(opts).spin(
-        document.getElementById("para-box")
-      );
+      issueChartSpinner.spin(document.getElementById("issue-chart"));
+      voteChartSpinner.spin(document.getElementById("yearly-vote-chart"));
+      volumeChartSpinner.spin(document.getElementById("yearly-volume-chart"));
+      importantBoxSpinner.spin(document.getElementById("important-box"));
+      amendBoxSpinner.spin(document.getElementById("amend-box"));
+      paraBoxSpinner.spin(document.getElementById("para-box"));
       document.getElementById(
         "country-info"
       ).textContent = ` [${countryToCountryname[country]}]`;
