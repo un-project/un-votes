@@ -486,7 +486,7 @@ d3.csv("data/countries.csv").then((countries) => {
             {
               label: "Number",
               format: (d) =>
-                `<a href="https://undocs.org/en/A/RES/${d.unres.substring(
+                `<a href="https://undocs.org/pdf?symbol=en/A/${d.unres.substring(
                   2
                 )}">${d.unres}</a>`,
             },
