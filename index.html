@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>United Nations General Assembly Voting, 1946-2019</title>
+    <title>United Nations General Assembly Voting, 1946-2020</title>
 
     <meta charset="UTF-8" />
 
@@ -50,15 +50,15 @@
   </head>
   <body>
     <div class="container">
-      <div class="row" style="margin-left: 9px;">
-        <h4>United Nations General Assembly Voting, 1946-2019</h4>
+      <div class="row" style="margin-left: 9px">
+        <h4>United Nations General Assembly Voting, 1946-2020</h4>
       </div>
 
-      <div class="row" style="margin: 0;">
-        <div id="map-chart" style="position: relative;">
-          <strong style="margin-left: 9px;">Select a country</strong
+      <div class="row" style="margin: 0">
+        <div id="map-chart" style="position: relative">
+          <strong style="margin-left: 9px">Select a country</strong
           ><span id="country-info"></span>
-          <p class="muted" style="margin-left: 9px;">
+          <p class="muted" style="margin-left: 9px">
             <small
               >Voting similarity index between ccode1 and ccode2 in a given
               session – computed using 3 category vote data (1 = “yes” or
@@ -70,10 +70,10 @@
           <a
             class="reset"
             href="javascript:mapChart.filterAll();dc.redrawAll();"
-            style="display: none;"
+            style="display: none"
             >reset</a
           >
-          <span class="reset" style="display: none;">
+          <span class="reset" style="display: none">
             | Current filter: <span class="filter"></span
           ></span>
           <div class="clearfix"></div>
@@ -82,15 +82,15 @@
 
       <div class="row">
         <div class="span4">
-          <div id="issue-chart" style="width: 100%; position: relative;">
-            <strong style="margin-left: 9px;">Filter by issue</strong>
+          <div id="issue-chart" style="width: 100%; position: relative">
+            <strong style="margin-left: 9px">Filter by issue</strong>
             <a
               class="reset"
               href="javascript:issueChart.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
-            <p class="muted" style="margin-left: 9px;">
+            <p class="muted" style="margin-left: 9px">
               <small
                 >These are based on searches in descriptions. They have been
                 subjected to a rudimentary visual check but they may not be 100%
@@ -102,15 +102,12 @@
         </div>
 
         <div class="span4">
-          <div
-            id="top-countries-chart"
-            style="width: 100%; position: relative;"
-          >
+          <div id="top-countries-chart" style="width: 100%; position: relative">
             <strong>Countries with highest voting similarity</strong>
             <a
               class="reset"
               href="javascript:topCountriesChart.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -120,13 +117,13 @@
         <div class="span4">
           <div
             id="bottom-countries-chart"
-            style="width: 100%; position: relative;"
+            style="width: 100%; position: relative"
           >
             <strong>Countries with lowest voting similarity</strong>
             <a
               class="reset"
               href="javascript:bottomCountriesChart.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -136,17 +133,17 @@
 
       <div class="row">
         <div class="span12">
-          <div id="yearly-vote-chart" style="width: 100%; position: relative;">
-            <strong style="margin-left: 9px;"
+          <div id="yearly-vote-chart" style="width: 100%; position: relative">
+            <strong style="margin-left: 9px"
               >Yearly voting records towards majority</strong
             >
-            <span class="reset" style="display: none;"
+            <span class="reset" style="display: none"
               >range: <span class="filter"></span
             ></span>
             <a
               class="reset"
               href="javascript:voteChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -158,9 +155,9 @@
         <div class="span12">
           <div
             id="yearly-volume-chart"
-            style="width: 100%; position: relative;"
+            style="width: 100%; position: relative"
           ></div>
-          <p class="muted pull-right" style="margin-right: 15px;">
+          <p class="muted pull-right" style="margin-right: 15px">
             select a time range to zoom in
           </p>
         </div>
@@ -168,15 +165,12 @@
 
       <div class="row">
         <div class="span2">
-          <div
-            id="majority-chart"
-            style="margin-left: 9px; position: relative;"
-          >
+          <div id="majority-chart" style="margin-left: 9px; position: relative">
             <strong>Position towards majority</strong>
             <a
               class="reset"
               href="javascript:majorityChart.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -184,17 +178,15 @@
         </div>
 
         <div class="span2">
-          <div id="amend-box" style="position: relative;">
+          <div id="amend-box" style="position: relative">
             <strong>Amendment</strong>
             <p class="muted">
-              <small>
-                Whether the vote was on an amendment
-              </small>
+              <small> Whether the vote was on an amendment </small>
             </p>
             <a
               class="reset"
               href="javascript:amendBox.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -202,7 +194,7 @@
         </div>
 
         <div class="span2">
-          <div id="para-box" style="position: relative;">
+          <div id="para-box" style="position: relative">
             <strong>Paragraph</strong>
             <p class="muted">
               <small>
@@ -213,7 +205,7 @@
             <a
               class="reset"
               href="javascript:paraBox.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -221,7 +213,7 @@
         </div>
 
         <div class="span2">
-          <div id="important-box" style="position: relative;">
+          <div id="important-box" style="position: relative">
             <strong>Important vote</strong>
             <p class="muted">
               <small>
@@ -233,7 +225,7 @@
             <a
               class="reset"
               href="javascript:importantBox.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -241,15 +233,15 @@
         </div>
 
         <div class="span4">
-          <div id="fluctuation-chart" style="position: relative;">
+          <div id="fluctuation-chart" style="position: relative">
             <strong>Agreement among voters</strong>
-            <span class="reset" style="display: none;"
+            <span class="reset" style="display: none"
               >range: <span class="filter"></span
             ></span>
             <a
               class="reset"
               href="javascript:fluctuationChart.filterAll();dc.redrawAll();"
-              style="display: none;"
+              style="display: none"
               >reset</a
             >
             <div class="clearfix"></div>
@@ -259,10 +251,10 @@
 
       <div class="clearfix"></div>
 
-      <div class="row" style="margin: 0;">
+      <div class="row" style="margin: 0">
         <div>
           <div>
-            <div class="dc-data-count" style="margin-left: 9px;">
+            <div class="dc-data-count" style="margin-left: 9px">
               <span class="filter-count"></span> selected out of
               <span class="total-count"></span> records |
               <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
@@ -276,7 +268,7 @@
 
       <a href="https://github.com/un-project/un-votes"
         ><img
-          style="position: absolute; top: 0; right: 0; border: 0;"
+          style="position: absolute; top: 0; right: 0; border: 0"
           src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
           alt="Fork me on GitHub"
       /></a>

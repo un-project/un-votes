@@ -1,4 +1,4 @@
-## United Nations General Assembly Voting, 1946-2019.
+## United Nations General Assembly Voting, 1946-2020.
 
 Data comes from:
 

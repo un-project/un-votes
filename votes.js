@@ -424,7 +424,7 @@ d3.csv("data/countries.csv").then((countries) => {
           .mouseZoomable(true)
           .rangeChart(volumeChart)
           .x(
-            d3.scaleTime().domain([new Date(1946, 0, 1), new Date(2020, 0, 14)])
+            d3.scaleTime().domain([new Date(1946, 0, 1), new Date(2021, 0, 14)])
           )
           .round(d3.timeYear.round)
           .xUnits(d3.timeYears)
@@ -453,7 +453,7 @@ d3.csv("data/countries.csv").then((countries) => {
           .centerBar(true)
           .gap(1)
           .x(
-            d3.scaleTime().domain([new Date(1946, 0, 1), new Date(2020, 0, 14)])
+            d3.scaleTime().domain([new Date(1946, 0, 1), new Date(2021, 0, 14)])
           )
           .round(d3.timeMonth.round)
           .alwaysUseRounding(true)
